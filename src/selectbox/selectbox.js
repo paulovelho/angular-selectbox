@@ -236,7 +236,7 @@ angular.module('selectbox', [])
                         '<ul class="mad-selectbox-dropdown" ng-show="view.show">'+
                             '<li ng-repeat="item in list track by $index"'+
                                 'ng-class="{active: multi ? (view.selected | contains:item.id) : ($index === index), focus: ($index === view.focus)}">'+
-                                '<a href class="mad-selectbox-item" ng-click="selectItem($index)">{{ item.name || item }}</a>'+
+                                '<a href class="mad-selectbox-item {{item.class}}" ng-click="selectItem($index)">{{ item.name || item }}</a>'+
                             '</li>'+
                             '<li class="mad-empty" ng-if="list.length === 0">the list is empty</li>'+
                         '</ul>'+
